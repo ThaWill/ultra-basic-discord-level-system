@@ -17,7 +17,6 @@ client.registry
     .registerCommandsIn(path.join(__dirname, "commands"));
 
 fs.readdirSync("./events")
-    .filter(e => e != "assets")
     .forEach(file => {
         let eventFunction = require(`./events/${file}`);
         let eventName = file.split(".")[0];
